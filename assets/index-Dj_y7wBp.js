@@ -627,27 +627,48 @@ class h {
         )
     }
     navigateTo(e) {
-        this.currentPage = e,
-        document.getElementById("home-page").style.display = "none",
-        document.getElementById("explore-page").style.display = "none",
-        document.getElementById("users-page").style.display = "none",
-        document.getElementById("about-page").style.display = "none",
-        document.getElementById("benben-page").style.display = "none",
-        e === "home" ? (document.getElementById("home-page").style.display = "block",
-        this.updateBreadcrumb("首页"),
-        this.updateNavActive("home")) : e === "explore" ? (document.getElementById("explore-page").style.display = "block",
-        this.updateBreadcrumb("探索"),
-        this.updateNavActive("explore"),
-        !this.websiteData || this.websiteData.length === 0 ? this.loadData("website") : this.renderWebsiteContent(),
-        !this.scriptData || this.scriptData.length === 0 ? this.loadData("script") : this.renderScriptContent()) : e === "users" ? (document.getElementById("users-page").style.display = "block",
-        this.updateBreadcrumb("用户"),
-        this.updateNavActive("users"),
-        this.usersData.length === 0 ? this.loadUsersData() : this.renderUsersContent()) : e === "about" && (document.getElementById("about-page").style.display = "block",
-        this.updateBreadcrumb("犇犇"),
-        this.updateNavActive("benben"),
-        this.updateBreadcrumb("关于"),
-        this.updateNavActive("about")),
-        window.location.hash = e
+        this.currentPage = e;
+        document.getElementById("home-page").style.display = "none";
+        document.getElementById("explore-page").style.display = "none";
+        document.getElementById("users-page").style.display = "none";
+        document.getElementById("benben-page").style.display = "none";
+        document.getElementById("about-page").style.display = "none";
+        if (e === "home") {
+            document.getElementById("home-page").style.display = "block";
+            this.updateBreadcrumb("首页");
+            this.updateNavActive("home");
+        } 
+        else if (e === "explore") {
+            document.getElementById("explore-page").style.display = "block";
+            this.updateBreadcrumb("探索");
+            this.updateNavActive("explore");
+            if (!this.websiteData || this.websiteData.length === 0)
+                this.loadData("website");
+            else this.renderWebsiteContent();
+            if (!this.scriptData || this.scriptData.length === 0)
+                this.loadData("script");
+            else this.renderScriptContent();
+        } 
+        else if (e === "users") {
+            document.getElementById("users-page").style.display = "block";
+            this.updateBreadcrumb("用户");
+            this.updateNavActive("users");
+            if (this.usersData.length === 0)
+                this.loadUsersData();
+            else this.renderUsersContent();
+        } 
+        else if (e === "benben") {
+            document.getElementById("benben-page").style.display = "block";
+            this.updateBreadcrumb("犇犇");
+            this.updateNavActive("benben");
+        }
+        else if (e === "about") {
+            document.getElementById("about-page").style.display = "block";
+            this.updateBreadcrumb("关于");
+            this.updateNavActive("about");
+        }
+
+        window.location.hash = e;
     }
     updateBreadcrumb(e) {
         let t;
