@@ -632,6 +632,7 @@ class h {
         document.getElementById("explore-page").style.display = "none",
         document.getElementById("users-page").style.display = "none",
         document.getElementById("about-page").style.display = "none",
+        document.getElementById("benben-page").style.display = "none",
         e === "home" ? (document.getElementById("home-page").style.display = "block",
         this.updateBreadcrumb("首页"),
         this.updateNavActive("home")) : e === "explore" ? (document.getElementById("explore-page").style.display = "block",
@@ -642,6 +643,8 @@ class h {
         this.updateBreadcrumb("用户"),
         this.updateNavActive("users"),
         this.usersData.length === 0 ? this.loadUsersData() : this.renderUsersContent()) : e === "about" && (document.getElementById("about-page").style.display = "block",
+        this.updateBreadcrumb("犇犇"),
+        this.updateNavActive("benben"),
         this.updateBreadcrumb("关于"),
         this.updateNavActive("about")),
         window.location.hash = e
