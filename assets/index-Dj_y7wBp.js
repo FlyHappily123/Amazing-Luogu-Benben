@@ -684,12 +684,20 @@ class h {
     }
     loadInitialPage() {
         const e = window.location.hash.replace("#", "");
-        e === "explore" ? this.navigateTo("explore") : e === "users" ? this.navigateTo("users") : e === "about" ? this.navigateTo("about") : this.navigateTo("home")
+        if(e === "explore")this.navigateTo("explore");
+        else if(e === "users")this.navigateTo("users");
+        else if(e === "benben")this.navigateTo("benben");
+        else if(e === "about")this.navigateTo("about");
+        else this.navigateTo("home");
     }
     setupHashChange() {
         window.addEventListener("hashchange", () => {
             const e = window.location.hash.replace("#", "");
-            e === "explore" ? this.navigateTo("explore") : e === "users" ? this.navigateTo("users") : e === "about" ? this.navigateTo("about") : this.navigateTo("home")
+            if(e === "explore")this.navigateTo("explore");
+            else if(e === "users")this.navigateTo("users");
+            else if(e === "benben")this.navigateTo("benben");
+            else if(e === "about")this.navigateTo("about");
+            else this.navigateTo("home");
         }
         )
     }
