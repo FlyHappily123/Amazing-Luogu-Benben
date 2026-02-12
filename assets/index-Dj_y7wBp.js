@@ -651,7 +651,8 @@ class h {
     }
     updateBreadcrumb(e) {
         let t;
-        this.currentPage === "home" ? t = '<i class="fas fa-home"></i>' : this.currentPage === "explore" ? t = `
+        if(this.currentPage === "home")t = '<i class="fas fa-home"></i>'
+        if(this.currentPage === "explore")t = `
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
            stroke-linejoin="round" class="breadcrumb-svg-icon" aria-hidden="true">
@@ -663,13 +664,16 @@ class h {
         <path d="m8 21 3.105-6.21"></path>
         <circle cx="12" cy="13" r="2"></circle>
       </svg>
-    ` : this.currentPage === "users" ? t = '<i class="fas fa-users"></i>' : this.currentPage === "about" && (t = '<i class="fas fa-info-circle"></i>'),
+    `;
+        if(this.currentPage === "users")t = '<i class="fas fa-users"></i>';
+        if(this.currentPage === "benben")t = '<i class="fas fa-benben"></i>';
+        if(this.currentPage === "about")t = '<i class="fas fa-info-circle"></i>';
         this.breadcrumb.innerHTML = `
     <a href="#${this.currentPage}" class="breadcrumb-item">
       ${t}
       <span>${e}</span>
     </a>
-  `
+  `;
     }
     updateNavActive(e) {
         document.querySelectorAll(".nav-item").forEach(i => {
