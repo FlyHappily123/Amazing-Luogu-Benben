@@ -39,7 +39,7 @@
 					<i class="fas fa-home nav-icon"></i>
 					<span class="nav-text">首页</span>
 				</a>
-				<a href="#explore" class="nav-item" data-page="explore">
+				<a href="explore" class="nav-item" data-page="explore">
 					<svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
 						fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
 						stroke-linejoin="round" class="lucide lucide-telescope size-5 shrink-0" aria-hidden="true">
@@ -200,94 +200,7 @@
 				</section>
 			</main>
 
-			<!-- 探索页面内容 -->
-			<main class="content" id="explore-page" style="display: none;">
-				<div class="explore-header">
-					<h1 class="explore-title">探索推荐</h1>
-					<p class="explore-subtitle">发现优质网站与脚本资源</p>
-					<div class="search-box">
-						<i class="fas fa-search"></i>
-						<input type="text" id="searchInput" placeholder="搜索网站或脚本..." class="search-input">
-						<button id="searchBtn" class="search-btn">
-							<i class="fas fa-search"></i>
-						</button>
-						<div class="explore-actions">
-							<button id="refreshBtn" class="refresh-btn">
-								<i class="fas fa-sync-alt"></i>
-								<span>刷新数据</span>
-							</button>
-						</div>
-					</div>
-					<div class="filter-tabs">
-						<button class="filter-tab active" data-filter="all">全部</button>
-						<button class="filter-tab" data-filter="website">网站推荐</button>
-						<button class="filter-tab" data-filter="script">脚本推荐</button>
-					</div>
-				</div>
-
-				<!-- 网站推荐区域 -->
-				<section class="recommendations-section" id="website-section">
-					<h2 class="section-title">
-						<i class="fas fa-globe"></i>
-						网站推荐
-						<span class="section-count" id="website-count">6</span>
-					</h2>
-					<div class="tag-filter">
-						<div class="tag-filter-header">
-							<i class="fas fa-tags"></i>
-							<span>按标签筛选：</span>
-						</div>
-						<div class="tag-list" id="website-tags">
-							<button class="tag-filter-item active" data-tag="all">全部</button>
-							<button class="tag-filter-item" data-tag="学习">学习</button>
-							<button class="tag-filter-item" data-tag="编程">编程</button>
-							<button class="tag-filter-item" data-tag="工具">工具</button>
-							<button class="tag-filter-item" data-tag="社区">社区</button>
-							<button class="tag-filter-item" data-tag="算法">算法</button>
-						</div>
-					</div>
-					<div class="recommendation-grid" id="website-grid">
-						<!-- 初始显示加载状态 -->
-						<div class="loading-container">
-							<div class="loading-spinner"></div>
-							<div class="loading-text">正在加载网站数据...</div>
-							<div class="loading-subtext">从 GitHub 获取最新推荐</div>
-						</div>
-					</div>
-				</section>
-
-				<!-- 脚本推荐区域 -->
-				<section class="recommendations-section" id="script-section">
-					<h2 class="section-title">
-						<i class="fas fa-code"></i>
-						脚本推荐
-						<span class="section-count" id="script-count">5</span>
-					</h2>
-					<div class="tag-filter">
-						<div class="tag-filter-header">
-							<i class="fas fa-tags"></i>
-							<span>按标签筛选：</span>
-						</div>
-						<div class="tag-list" id="script-tags">
-							<button class="tag-filter-item active" data-tag="all">全部</button>
-							<button class="tag-filter-item" data-tag="增强">增强</button>
-							<button class="tag-filter-item" data-tag="美化">美化</button>
-							<button class="tag-filter-item" data-tag="工具">工具</button>
-							<button class="tag-filter-item" data-tag="自动化">自动化</button>
-							<button class="tag-filter-item" data-tag="学习">学习</button>
-						</div>
-					</div>
-					<div class="recommendation-grid" id="script-grid">
-						<!-- 初始显示加载状态 -->
-						<div class="loading-container">
-							<div class="loading-spinner"></div>
-							<div class="loading-text">正在加载脚本数据...</div>
-							<div class="loading-subtext">从 GitHub 获取最新推荐</div>
-						</div>
-					</div>
-
-				</section>
-			</main>
+			
 
 			<!-- 用户页面 -->
 			<main class="content" id="users-page" style="display: none;">
