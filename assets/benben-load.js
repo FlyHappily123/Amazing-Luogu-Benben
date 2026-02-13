@@ -8,7 +8,7 @@ async function load(){
         .select('*')
         .order('created_at', { ascending: false })
         .range(p, p+9);
-    for(var i=0;i<=data.length;i++){
+    for(var i=0;i<data.length;i++){
         const el = document.createElement('div');
         el.className = 'benben';
         const up = document.createElement('div');
