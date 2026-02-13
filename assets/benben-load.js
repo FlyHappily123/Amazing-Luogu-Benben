@@ -29,3 +29,4 @@ async function load(){
         list.appendChild(el);
     }
 }
+load();
